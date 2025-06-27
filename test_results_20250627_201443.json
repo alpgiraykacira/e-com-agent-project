@@ -1,0 +1,678 @@
+{
+  "test_metadata": {
+    "timestamp": "2025-06-27T20:10:38.636781",
+    "total_scenarios": 10,
+    "total_interactions": 37,
+    "agent_version": "updated_with_rag"
+  },
+  "scenarios": [
+    {
+      "scenario_id": 1,
+      "name": "Order Tracking with Follow-up",
+      "customer": "Ahmet Yılmaz",
+      "interactions": [
+        {
+          "step": 1,
+          "user_input": "Merhaba, TY123456789 numaralı siparişim nerede?",
+          "intent": "order_status",
+          "confidence": 0.9,
+          "entities": {
+            "order_id": "123456789",
+            "status_inquiry": true
+          },
+          "agent_response": "Merhaba Ahmet Yılmaz,\n\nTY123456789 numaralı siparişinizin durumu hakkında size bilgi vereyim. Siparişiniz başarıyla **tamamlandı** ve **teslim edildi**! \n\n- **Sipariş Tarihi:** 20/06/2025\n- **Teslim Tarihi:** 23/06/2025\n- **Adres:** İstanbul, Kadıköy, Moda Mah. 123 Sok. No:5\n- **Ödeme Durumu:** Kredi Kartı - Ödendi\n\nEğer başka bir sorunuz veya yardıma ihtiyacınız olursa, lütfen bana bildirin! ",
+          "tools_used": [
+            "get_order_info"
+          ],
+          "response_length": 396
+        },
+        {
+          "step": 2,
+          "user_input": "Kargo firması hangisi?",
+          "intent": "order_status",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Ahmet Yılmaz,\n\nMaalesef, sipariş bilgilerinde kargo firmasının adı belirtilmemiş. Ancak, genel olarak, siparişlerimizi sıklıkla [kargo firması adını ekleyin, örneğin: Yurtiçi Kargo, MNG Kargo vb.] aracılığıyla gönderiyoruz. \n\nDaha fazla bilgiye ihtiyacınız varsa veya başka bir sorunuz varsa, lütfen sormaktan çekinmeyin!",
+          "tools_used": [
+            "get_order_info"
+          ],
+          "response_length": 329
+        },
+        {
+          "step": 3,
+          "user_input": "Teslimat tarihini değiştirebilir miyim?",
+          "intent": "order_status",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Ahmet Yılmaz,\n\nTeslimat tarihini değiştirmeniz mümkün. Ancak, bu genellikle belirli koşullara bağlıdır ve işleminizi gerçekleştirmek için sizinle iletişime geçmemiz gerekebilir.\n\nLütfen teslimat tarihini değiştirmek istediğiniz yeni tarihi bana belirtin, ben de bunun nasıl yapılabileceği konusunda size yardımcı olayım. Eğer başka bir sorunuz olursa, lütfen çekinmeyin!",
+          "tools_used": [
+            "get_policy_info"
+          ],
+          "response_length": 378
+        }
+      ],
+      "summary": {
+        "total_steps": 3,
+        "errors": 0,
+        "tools_used": [
+          "get_order_info",
+          "get_policy_info"
+        ],
+        "intents_detected": [
+          "order_status"
+        ]
+      }
+    },
+    {
+      "scenario_id": 2,
+      "name": "Product Information Deep Dive",
+      "customer": "Ayşe Demir",
+      "interactions": [
+        {
+          "step": 1,
+          "user_input": "iPhone 15 Pro Max hakkında bilgi istiyorum",
+          "intent": "product_info",
+          "confidence": 0.9,
+          "entities": {
+            "product_name": "iphone 15 pro max"
+          },
+          "agent_response": "Merhaba Ayşe Demir,\n\niPhone 15 Pro Max hakkında bilgi almak istediğiniz için teşekkür ederim! İşte detaylar:\n\n- **Model:** iPhone 15 Pro Max\n- **Depolama:** 256GB\n- **Fiyat:** ₺52,999.99\n- **Stok Durumu:** 15 adet mevcut - ✅ Stokta\n- **Renk Seçenekleri:** Doğal Titanyum, Siyah Titanyum, Beyaz Titanyum, Mavi Titanyum\n- **Satıcı:** TechWorld\n- **Değerlendirme:** ⭐ 4.8/5 (1247 inceleme)\n- **Garanti Süresi:** 2 yıl üretici garantisi\n- **İade Süresi:** 15 gün içinde iade edilebilir\n\nApple'ın en gelişmiş iPhone modeli olan bu cihaz, titanyum tasarımı, A17 Pro çipi ve profesyonel kamera sistemi ile dikkat çekiyor.\n\nEğer başka bir sorunuz varsa veya bu ürünle ilgili satın alma işlemi yapmak isterseniz, size yardımcı olmaktan mutluluk duyarım!",
+          "tools_used": [
+            "get_product_info"
+          ],
+          "response_length": 744
+        },
+        {
+          "step": 2,
+          "user_input": "256GB model stokta var mı?",
+          "intent": "product_info",
+          "confidence": 0.9,
+          "entities": {
+            "product_name": "256gb model",
+            "status_inquiry": "stock"
+          },
+          "agent_response": "Merhaba Ayşe Demir,\n\nEvet, iPhone 15 Pro Max 256GB modeli stokta mevcut! Şu an elimizde 15 adet var. Eğer bu ürünü satın almak isterseniz ya da başka sorularınız varsa, size yardımcı olmaktan mutluluk duyarım! \n\nBaşka bir şeyle ilgilenmek ister misiniz?",
+          "tools_used": [],
+          "response_length": 253
+        },
+        {
+          "step": 3,
+          "user_input": "Hangi renkler mevcut?",
+          "intent": "product_info",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Ayşe Demir,\n\niPhone 15 Pro Max 256GB modeli için mevcut renk seçenekleri şunlardır:\n\n- Doğal Titanyum\n- Siyah Titanyum\n- Beyaz Titanyum\n- Mavi Titanyum\n\nHangi rengi tercih ederseniz, ya da başka bir sorunuz varsa, size yardımcı olmaktan mutluluk duyarım!",
+          "tools_used": [],
+          "response_length": 262
+        },
+        {
+          "step": 4,
+          "user_input": "Garanti politikası nedir?",
+          "intent": "general_inquiry",
+          "confidence": 0.9,
+          "entities": {
+            "policy_terms": "policy_inquiry"
+          },
+          "agent_response": "Merhaba Ayşe Demir,\n\nGaranti politikamız hakkında şu bilgileri verebilirim:\n\n- **Elektronik Ürünler:** 2 yıl resmi distribütör garantisi mevcuttur.\n- **Giyim Ürünleri:** Üretim hatası durumunda 30 gün değişim garantisi vardır.\n- Garanti kapsamında olmayan durumlar arasında fiziksel hasar, su teması ve yanlış kullanım bulunur.\n\nEğer daha fazla bilgi isterseniz veya başka bir sorunuz varsa, lütfen bana bildirin! Yardımcı olmaktan mutluluk duyarım.",
+          "tools_used": [
+            "get_policy_info"
+          ],
+          "response_length": 449
+        }
+      ],
+      "summary": {
+        "total_steps": 4,
+        "errors": 0,
+        "tools_used": [
+          "get_product_info",
+          "get_policy_info"
+        ],
+        "intents_detected": [
+          "product_info",
+          "general_inquiry"
+        ]
+      }
+    },
+    {
+      "scenario_id": 3,
+      "name": "Return Process with Account Check",
+      "customer": "Mehmet Kaya",
+      "interactions": [
+        {
+          "step": 1,
+          "user_input": "Samsung telefonu iade etmek istiyorum",
+          "intent": "return_refund",
+          "confidence": 0.95,
+          "entities": {
+            "product_name": "samsung telefonu"
+          },
+          "agent_response": "Merhaba Mehmet Kaya,\n\nSamsung telefonunuzu iade etmek istediğinizi anlıyorum. İade süreci hakkında size bilgi vermek isterim.\n\n**İade Süreci:**\n- Ürünü satın aldığınız tarihten itibaren **15 gün** içinde iade edebilirsiniz.\n- Telefonun, **orijinal ambalajında, hasarsız ve kullanılmamış** olması gerekir.\n- İade kargo ücreti **size aittir**.\n\nİadenizi gerçekleştirmek için, telefonunuzu ve gerekli belgeleri ambalajlayarak öncelikle bize geri göndermelisiniz. Ürününüz bize ulaştıktan sonra, iade işleminiz onaylanacak ve ilgili tutar, ödemeniz yapılan kaynağa geri ödenecektir. İade işlemi genellikle 5-7 iş günü içerisinde tamamlanmaktadır.\n\nHerhangi bir sorunuz olursa veya daha fazla yardıma ihtiyacınız olursa, lütfen bana bildirin. İyi alışverişler dilerim!",
+          "tools_used": [
+            "get_policy_info"
+          ],
+          "response_length": 763
+        },
+        {
+          "step": 2,
+          "user_input": "Hesabımda hangi siparişler var?",
+          "intent": "account_help",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Mehmet Kaya,\n\nHesabınızdaki mevcut siparişler hakkında bilgi vermekten memnuniyet duyarım. Şu anda hesabınızda aşağıdaki sipariş var:\n\n### Sipariş Detayları:\n- **Sipariş No:** TY345678901\n- **Ürün:** Samsung Telefon\n- **Adet:** 1\n- **Toplam Tutar:** ₺47,999.99\n- **Durum:** Hazırlanıyor\n- **Gönderim Durumu:** Hazırlanıyor\n- **Tahmini Teslim Tarihi:** 29/06/2025\n- **Teslimat Adresi:** İzmir, Bornova, Evka 3 Mah. 789 Sok. No:8\n\nÖdeme yöntemi olarak kredi kartı kullanılmıştır ve ödemeniz gerçekleşmiştir.\n\nHerhangi bir başka sorunuz veya yardıma ihtiyacınız olursa lütfen bana bildirin! İyi günler dilerim!",
+          "tools_used": [
+            "get_order_info",
+            "get_customer_info"
+          ],
+          "response_length": 615
+        },
+        {
+          "step": 3,
+          "user_input": "İade süreci nasıl işliyor?",
+          "intent": "return_refund",
+          "confidence": 0.9,
+          "entities": {
+            "policy_inquiry": "i̇ade süreci"
+          },
+          "agent_response": "Merhaba Mehmet Kaya,\n\nİade sürecinizle ilgili bilgi vermekten memnuniyet duyarım. Süreç aşağıdaki gibidir:\n\n### İade Süreci:\n1. **İade Süresi:** Ürünü satın aldığınız tarihten itibaren **15 gün** içinde iade edebilirsiniz.\n2. **Ürün Koşulları:** İade etmek istediğiniz ürünün, **orijinal ambalajında, hasarsız ve kullanılmamış** olması gerekmektedir.\n3. **Kargo Ücreti:** İade kargo ücreti **size aittir**; ürünü geri göndermek için gerekli kargo ücretini karşılamanız gerekecek.\n\n### İade İşlemi:\n- İade etmek istediğiniz ürünü ve gerekli belgeleri uygun şekilde ambalajlayarak göndermelisiniz.\n- Ürününüz bize ulaştıktan sonra, iade işleminiz onaylanır ve ilgili tutar, ödemeniz yapılan kaynağa geri ödenir.\n- İade işlemi genellikle **5-7 iş günü** içerisinde tamamlanmaktadır.\n\nEğer başka bir sorunuz olursa veya daha fazla yardıma ihtiyaç duyarsanız, lütfen bana bildirin. İyi alışverişler dilerim!",
+          "tools_used": [],
+          "response_length": 902
+        },
+        {
+          "step": 4,
+          "user_input": "İade ne kadar sürer?",
+          "intent": "return_refund",
+          "confidence": 0.9,
+          "entities": {
+            "policy_inquiry": "iade"
+          },
+          "agent_response": "Merhaba Mehmet Kaya,\n\nİade süresi ile ilgili bilgi vermek isterim. İade işlemi, ürününüz bize ulaştıktan sonra genellikle **5-7 iş günü** içerisinde tamamlanmaktadır. \n\nİade sürecinin adımlarını özetlemek gerekirse:\n1. Ürününüzü uygun bir şekilde ambalajlayarak geri göndermelisiniz.\n2. Ürününüz bize ulaştıktan sonra, iade işleminiz onaylanır.\n3. Onaylandıktan sonra, geri ödeme işlemi başlatılır ve ilgili tutar, ödemeniz yapılan kaynağa geri iade edilir.\n\nHerhangi bir sorunuz veya başka bir yardım isteğiniz olursa, lütfen bana bildirin. Size yardımcı olmaktan memnuniyet duyarım!",
+          "tools_used": [],
+          "response_length": 584
+        }
+      ],
+      "summary": {
+        "total_steps": 4,
+        "errors": 0,
+        "tools_used": [
+          "get_order_info",
+          "get_policy_info",
+          "get_customer_info"
+        ],
+        "intents_detected": [
+          "return_refund",
+          "account_help"
+        ]
+      }
+    },
+    {
+      "scenario_id": 4,
+      "name": "Stock and Product Search",
+      "customer": "Zeynep Kaya",
+      "interactions": [
+        {
+          "step": 1,
+          "user_input": "Nike ayakkabı var mı?",
+          "intent": "product_info",
+          "confidence": 0.9,
+          "entities": {
+            "product_name": "nike ayakkabı"
+          },
+          "agent_response": "Merhaba Zeynep Kaya,\n\nNike ayakkabıları ile ilgili olarak, **Nike Air Max 270** modelimiz mevcut. İşte detaylar:\n\n- **Fiyat:** ₺1299.99\n- **Stok Durumu:** 45 adet - ✅ Stokta\n- **Bedenler:** 36, 37, 38, 39, 40, 41, 42, 43, 44, 45\n- **Renk Seçenekleri:** Siyah, Beyaz, Kırmızı, Mavi\n- **Satıcı:** SportMax\n- **Derecelendirme:** ⭐ 4.5/5 (634 değerlendirme)\n- **Garanti:** 2 yıl imalatçı garantisi\n- **İade Süresi:** 15 gün içinde iade imkanı\n\nBu model, rahat ve şık tasarımı ile dikkat çekiyor; Air Max teknolojisi sayesinde üstün konfor sağlıyorsunuz.\n\nSipariş vermek isterseniz, sizin için başka bir konu var mı? Yardımcı olacak başka bir şey bulabilir miyim?",
+          "tools_used": [
+            "get_product_info"
+          ],
+          "response_length": 658
+        },
+        {
+          "step": 2,
+          "user_input": "Air Max 270 özellikle",
+          "intent": "product_info",
+          "confidence": 0.9,
+          "entities": {
+            "product_name": "air max 270"
+          },
+          "agent_response": "Merhaba Zeynep Kaya,\n\nAir Max 270 ayakkabısı hakkında daha fazla bilgi istediğiniz için teşekkür ederim. İşte detayları:\n\n- **Ürün Adı:** Nike Air Max 270\n- **Fiyat:** ₺1299.99\n- **Stok Durumu:** 45 adet - ✅ Stokta\n- **Bedenler:** 36, 37, 38, 39, 40, 41, 42, 43, 44, 45\n- **Renk Seçenekleri:** Siyah, Beyaz, Kırmızı, Mavi\n- **Satıcı:** SportMax\n- **Derecelendirme:** ⭐ 4.5/5 (634 değerlendirme)\n- **Garanti:** 2 yıl imalatçı garantisi\n- **İade Süresi:** 15 gün içinde iade imkanı\n\nNike Air Max 270, rahat ve şık tasarımıyla dikkat çekiyor ve Air Max teknolojisi sayesinde üstün konfor sağlıyor. \n\nBu ürünü sipariş vermek isterseniz veya başka bir konuda yardıma ihtiyacınız olursa lütfen bana bildirin! Başka bir şeyle yardımcı olabilir miyim?",
+          "tools_used": [
+            "get_product_info"
+          ],
+          "response_length": 743
+        },
+        {
+          "step": 3,
+          "user_input": "38 numara stokta mı?",
+          "intent": "product_info",
+          "confidence": 0.9,
+          "entities": {
+            "quantity": "38",
+            "status_inquiry": "stock"
+          },
+          "agent_response": "Merhaba Zeynep Kaya,\n\nEvet, **Nike Air Max 270** modelinin 38 numarası stokta bulunmaktadır. \n\n- **Fiyat:** ₺1299.99\n- **Stok Durumu:** 45 adet - ✅ Stokta\n\nBaşka bir konuda yardımcı olabilirsem lütfen bana bildirin! Sipariş vermek isterseniz de buradayım.",
+          "tools_used": [
+            "get_product_info"
+          ],
+          "response_length": 255
+        },
+        {
+          "step": 4,
+          "user_input": "Benzer Nike modelleri neler?",
+          "intent": "product_info",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Zeynep Kaya,\n\nNike markasına ait benzer modeller hakkında bilgi almak isterseniz, şu anda elimizdeki en popüler modellerden biri **Nike Air Max 270**. Bunun dışında, Nike'ın diğer popüler spor ayakkabı serileri de genellikle yüksek konfor ve şıklık sunuyor.\n\nMaalesef, şu an başka spesifik Nike modellerinin stok bilgisini paylaşamıyorum ancak Nike Air Max serisi dışındaki modelleri de gözden geçirebiliriz. Eğer isterseniz, bu konuda size daha fazla yardımcı olabilirim veya belirli bir model arayışında değilseniz alternatif markaları da öneri olarak sunabilirim.\n\nBaşka bir şeyle yardımcı olabilir miyim?",
+          "tools_used": [
+            "get_product_info"
+          ],
+          "response_length": 616
+        }
+      ],
+      "summary": {
+        "total_steps": 4,
+        "errors": 0,
+        "tools_used": [
+          "get_product_info"
+        ],
+        "intents_detected": [
+          "product_info"
+        ]
+      }
+    },
+    {
+      "scenario_id": 5,
+      "name": "Membership Benefits Inquiry",
+      "customer": "Ali Şahin",
+      "interactions": [
+        {
+          "step": 1,
+          "user_input": "Üyelik bilgilerimi öğrenebilir miyim?",
+          "intent": "account_help",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Ali Şahin,\n\nÜyelik bilgileriniz hakkında yardımcı olmaktan memnuniyet duyarım! İşte hesap detaylarınız:\n\n- **Üyelik Seviye:** Altın\n- **Faydalar:** Ücretsiz kargo, öncelikli destek, uzatılmış iade süresi\n- **Hesap Durumu:** Aktif\n- **Kayıt Durumu:** Doğrulanmış\n\nEğer başka bir sorunuz varsa veya daha fazla bilgi almak isterseniz lütfen bana bildirin! Size yardımcı olmaktan mutluluk duyarım.",
+          "tools_used": [
+            "get_customer_info"
+          ],
+          "response_length": 401
+        },
+        {
+          "step": 2,
+          "user_input": "Gold üyeliğimin faydaları neler?",
+          "intent": "account_help",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Ali Şahin,\n\nGold üyeliğinizin faydaları şunlardır:\n\n- **%10 indirim:** Ürünlerinizde alışveriş yaparken %10 indirimden yararlanırsınız.\n- **Ücretsiz kargo:** Tüm siparişlerinizde kargo ücreti ödemezsiniz.\n- **Erken erişim:** Özel kampanyalara ve indirimlere erken erişim hakkına sahip olursunuz.\n\nBu avantajlar, alışveriş deneyiminizi daha keyifli hale getirmeyi amaçlıyor. Başka bir sorunuz varsa veya başka bir konuda yardımcı olmamı isterseniz lütfen bildirin!",
+          "tools_used": [
+            "get_policy_info"
+          ],
+          "response_length": 471
+        },
+        {
+          "step": 3,
+          "user_input": "Kargo ücretsiz mi benim için?",
+          "intent": "general_inquiry",
+          "confidence": 0.9,
+          "entities": {
+            "policy_inquiry": true
+          },
+          "agent_response": "Merhaba Ali Şahin,\n\nEvet, Gold üyeliğiniz sayesinde tüm siparişlerinizde kargo ücretsizdir. Bu, alışveriş yaparken büyük bir avantaj sağlar!\n\nEğer başka sorularınız varsa veya yardımcı olmamı istediğiniz başka bir konu varsa, lütfen bana bildirin. Size yardımcı olmaktan mutluluk duyarım!",
+          "tools_used": [],
+          "response_length": 288
+        }
+      ],
+      "summary": {
+        "total_steps": 3,
+        "errors": 0,
+        "tools_used": [
+          "get_customer_info",
+          "get_policy_info"
+        ],
+        "intents_detected": [
+          "account_help",
+          "general_inquiry"
+        ]
+      }
+    },
+    {
+      "scenario_id": 6,
+      "name": "Payment Issue Resolution",
+      "customer": "Fatma Arslan",
+      "interactions": [
+        {
+          "step": 1,
+          "user_input": "Ödeme yaparken sorun yaşıyorum",
+          "intent": "payment_issue",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Fatma Hanım,\n\nÖdeme yaparken sorun yaşadığınızı öğrendim ve bu konuda size yardımcı olmak istiyorum. İşte deneyebileceğiniz birkaç adım:\n\n1. **Kart Bilgilerini Kontrol Edin**: Kullandığınız kartın bilgilerini doğru girdiğinizden emin olun.\n2. **Limit Sorgulaması**: Kart limitinizin yetip yetmediğini bankanızdan kontrol edin.\n3. **Farklı Bir Ödeme Yöntemi Deneyin**: Eğer sorun devam ederse, başka bir ödeme yöntemi kullanmayı deneyebilirsiniz.\n\nEğer hala sorun yaşıyorsanız, lütfen bana bildirirseniz daha fazla yardımcı olmaktan memnuniyet duyarım. Ayrıca başka bir konuda yardım isteğiniz var mı?\n\nİyi alışverişler dilerim!",
+          "tools_used": [
+            "get_customer_info",
+            "get_faq_info"
+          ],
+          "response_length": 635
+        },
+        {
+          "step": 2,
+          "user_input": "Kartımdan para çekildi ama sipariş yok",
+          "intent": "payment_issue",
+          "confidence": 0.9,
+          "entities": {
+            "customer_identifier": "kartımdan",
+            "status_inquiry": "sipariş"
+          },
+          "agent_response": "Merhaba Fatma Hanım,\n\nKartınızdan para çekildiği halde siparişinizin görünmediğini anlıyorum. Bu durum gerçekten can sıkıcı olabilir, ve sizi daha fazla bekletmek istemiyorum.\n\nDurumu kontrol etmek için önce sipariş bilgilerinizi bulmam gerekiyor, ancak şu an için sistemde sizinle ilgili bir sipariş kaydına ulaşamadım. Bu durumda lütfen aşağıdaki adımları izleyin:\n\n1. **Hesabınızı Kontrol Edin**: Trendyol hesabınıza giriş yaparak \"Siparişlerim\" bölümünü kontrol edebilirsiniz. Eğer orada bir sipariş göremezseniz.\n2. **Bankanızla İletişime Geçin**: Kartınızdan çekilen tutar ile ilgili bilgi almak için bankanızla iletişime geçebilirsiniz.\n\nEğer bu adımlar sorunuzu çözmezse, lütfen benimle iletişime geçin. Daha fazla yardımcı olmak için size bir destek bileti açabilirim.\n\nİlginiz için teşekkür ederim, başka bir konuda yardımcı olmamı ister misiniz?",
+          "tools_used": [
+            "get_order_info"
+          ],
+          "response_length": 856
+        },
+        {
+          "step": 3,
+          "user_input": "İade ne zaman hesabıma yansır?",
+          "intent": "return_refund",
+          "confidence": 0.9,
+          "entities": {
+            "policy_terms": "policy_inquiry"
+          },
+          "agent_response": "Merhaba Fatma Hanım,\n\nİade işleminizin ne zaman hesabınıza yansıyacağını öğrenmek istediğinizi anlıyorum. Ürün iade sürecinde genellikle şu şekilde ilerliyoruz:\n\n- İade ettiğiniz ürün, bizim depomuza ulaştıktan sonra, inceleme sürecimiz başlar.\n- İade ürününüz kabul edildikten sonra, geri ödemeniz genellikle 3-7 iş günü içinde hesabınıza yansır.\n\nUnutmayın ki, ürünlerinizi satın aldığınız tarihten itibaren 15 gün içinde iade edebilir ve ürünlerin orijinal ambalajında, hasarsız ve kullanılmamış olması gerekmektedir. İade kargo ücreti ise size ait olacaktır.\n\nBaşka bir konuda yardımcı olmamı ister misiniz?",
+          "tools_used": [
+            "get_policy_info"
+          ],
+          "response_length": 611
+        }
+      ],
+      "summary": {
+        "total_steps": 3,
+        "errors": 0,
+        "tools_used": [
+          "get_order_info",
+          "get_customer_info",
+          "get_policy_info",
+          "get_faq_info"
+        ],
+        "intents_detected": [
+          "payment_issue",
+          "return_refund"
+        ]
+      }
+    },
+    {
+      "scenario_id": 7,
+      "name": "Delivery Problem Handling",
+      "customer": "Emre Koç",
+      "interactions": [
+        {
+          "step": 1,
+          "user_input": "TY789012345 kargom gecikti",
+          "intent": "order_status",
+          "confidence": 0.9,
+          "entities": {
+            "order_id": "789012345",
+            "status_inquiry": "status_inquiry"
+          },
+          "agent_response": "Merhaba Emre Koç,\n\nKargonuzun durumu hakkında bilgi vermekten memnuniyet duyarım. **TY789012345** numaralı siparişiniz şu an dağıtımda ve kargonuz yola çıktı. Siparişinizin teslimat tarihi **28/06/2025** olarak planlanmıştı, bu nedenle hâlâ zamanında ulaşması bekleniyor.\n\nEğer daha fazla bilgiye ihtiyacınız olursa veya başka bir konuda yardımcı olmamı isterseniz, lütfen çekinmeden belirtin. Size yardımcı olmaktan mutluluk duyarım! \n\nİyi günler dilerim! 🌟",
+          "tools_used": [
+            "get_order_info"
+          ],
+          "response_length": 458
+        },
+        {
+          "step": 2,
+          "user_input": "3 gündür evde kimse yok diyor",
+          "intent": "general_inquiry",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Emre Koç,\n\nKargonuzun teslimatında yaşanan sıkıntı için üzgünüm. Kargo firmaları bazen teslimat süreçlerinde aksaklık yaşayabiliyor. Eğer 3 gündür evde kimse yok diyorlarsa, bu durum kargonuzun teslim edilmediği anlamına geliyor.\n\nAşağıdaki adımları izleyerek durumu takip edebilirsiniz:\n\n1. **Sipariş Takibi**: Sipariş numaranız ile Hesabım > Siparişlerim bölümünden kargo durumunu kontrol edebilirsiniz.\n2. **Kargo Firması ile İletişim**: Kargo firması ile iletişime geçerek teslimat durumu hakkında bilgi alabilirsiniz.\n\nEğer başka bir konuda yardımcı olmamı isterseniz, lütfen bana bildirin. Size yardımcı olmak için buradayım! \n\nİyi günler dilerim! 🌟",
+          "tools_used": [
+            "get_faq_info"
+          ],
+          "response_length": 663
+        },
+        {
+          "step": 3,
+          "user_input": "Şubeden alabilirim",
+          "intent": "general_inquiry",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Emre Koç,\n\nEvet, siparişinizi kargo şubesinden alabilirsiniz. Adrese teslim edilemeyen paketler, kargo şubesinde 7 gün bekletilmektedir. Eğer paketinizin şubeye ulaşıp ulaşmadığından emin olmak istiyorsanız, kargo takip numaranızla kargo şirketiyle iletişime geçerek durumu kontrol edebilirsiniz.\n\nBaşka bir sorunuz veya yardıma ihtiyacınız olursa lütfen bana bildirin. Size yardımcı olmaktan memnuniyet duyarım! \n\nİyi günler dilerim! 🌟",
+          "tools_used": [
+            "get_policy_info"
+          ],
+          "response_length": 444
+        },
+        {
+          "step": 4,
+          "user_input": "Gecikme tazminatı var mı?",
+          "intent": "general_inquiry",
+          "confidence": 0.9,
+          "entities": {
+            "policy_terms": "policy_inquiry"
+          },
+          "agent_response": "Merhaba Emre Koç,\n\nKargo gecikmeleri için tazminat politikamız hakkında maalesef belirli bir bilgi mevcut değil. Genellikle, teslimat süreleri ve gecikmeler, kargo firmasının süreçlerine bağlıdır ve bu tür durumlarla ilgili tazminat talepleri için firmalarla iletişime geçilmesi gerekebilir.\n\nEğer kargo gecikmesi ile ilgili ek bilgi veya yardıma ihtiyacınız varsa, kargo şirketiyle iletişime geçmenizi öneririm. Ayrıca başka bir konuda yardımcı olabilirsem, lütfen bana bildirin!\n\nİyi günler dilerim! 🌟",
+          "tools_used": [
+            "get_policy_info"
+          ],
+          "response_length": 503
+        }
+      ],
+      "summary": {
+        "total_steps": 4,
+        "errors": 0,
+        "tools_used": [
+          "get_order_info",
+          "get_policy_info",
+          "get_faq_info"
+        ],
+        "intents_detected": [
+          "order_status",
+          "general_inquiry"
+        ]
+      }
+    },
+    {
+      "scenario_id": 8,
+      "name": "Product Recommendation Request",
+      "customer": "Selin Yurt",
+      "interactions": [
+        {
+          "step": 1,
+          "user_input": "Laptop önerisi lazım",
+          "intent": "product_info",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Selin,\n\nLaptop önerisiyle ilgili olarak size yardımcı olmaktan memnuniyet duyarım. Şu anda elimizdeki laptoplar hakkında net bir bilgiye ulaşamadım. Ancak size güncel öneriler sunabileceğim diğer ürün kategorileri veya belirli ihtiyaçlarınıza göre (örneğin, oyun, iş, günlük kullanım) daha spesifik önerilerde bulunabilirim.\n\nHangi özelliklerin öncelikli olduğunu belirtirseniz, ihtiyaçlarınıza uygun bir laptop bulmanızda daha fazla yardımcı olabilirim. Örneğin, bütçeniz, ekran boyutu veya marka tercihlerinizi belirtebilirsiniz.\n\nSize nasıl daha iyi yardımcı olabilirim?",
+          "tools_used": [
+            "get_product_info"
+          ],
+          "response_length": 581
+        },
+        {
+          "step": 2,
+          "user_input": "Yazılım geliştirme için",
+          "intent": "general_inquiry",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Selin,\n\nYazılım geliştirme için uygun bir laptop seçimi yapmak oldukça önemli. Genel olarak, yazılım geliştirme için dikkate almanız gereken bazı önemli özellikler şunlardır:\n\n1. **İşlemci (CPU)**: En az dört çekirdekli bir işlemci seçmeniz önerilir. İ7 veya I9 gibi güçlü işlemciler, daha iyi performans sağlar.\n   \n2. **RAM**: Yazılım geliştirme için 16 GB RAM minimum önerilir; 32 GB veya daha fazlası, çoklu işlemler için daha iyi olacaktır.\n\n3. **Depolama**: SSD (Solid State Drive) tercih edin. En az 512 GB SSD, daha hızlı yükleme süreleri için idealdir.\n\n4. **Ekran**: Geniş, yüksek çözünürlüklü bir ekran, kod yazarken ve grafik çalışmaları yaparken faydalı olur.\n\n5. **Bağlantı noktaları**: USB-C, HDMI gibi bağlantı noktalarının bulunması işleri kolaylaştırır.\n\nBu özelliklerle donatılmış laptoplar, yazılım geliştirme süreçlerini daha verimli hale getirir. Eğer daha spesifik bir model önerisi isterseniz veya fiyat aralığına dair bilgi isterseniz, lütfen belirtin. Size uygun seçenekleri bulmaktan memnuniyet duyarım!\n\nBaşka bir konuda yardımcı olabilir miyim?",
+          "tools_used": [
+            "get_faq_info"
+          ],
+          "response_length": 1081
+        },
+        {
+          "step": 3,
+          "user_input": "Bütçem 50000 TL civarı",
+          "intent": "general_inquiry",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Selin,\n\n50000 TL civarında bir bütçeniz olduğunu belirttiniz, bu da yazılım geliştirme için oldukça iyi bir aralık. Ancak, şu anda elimde bu fiyat aralığında spesifik bir laptop modeline dair veri yok. \n\nBunu aşmak için size birkaç genel öneride bulunabilirim:\n\n- **Markaların Web Siteleri**: Lenovo, Dell, HP veya Apple gibi popüler markaların resmi web sitelerinde, istediğiniz bütçeye uygun modelleri bulabilirsiniz.\n\n- **Online Marketler**: Trendyol gibi platformlardan filtreleme yaparak fiyat aralığını belirleyebilir ve farklı markalara ait laptopların özelliklerini karşılaştırabilirsiniz.\n\nEğer belirli bir marka veya özellik üzerinde yoğunlaşmak isterseniz, lütfen bana bildirin, böylece daha fazla yardımcı olabilirim! Başka bir konuda destek olmamı ister misiniz?",
+          "tools_used": [
+            "get_product_info"
+          ],
+          "response_length": 783
+        },
+        {
+          "step": 4,
+          "user_input": "Performans/fiyat en iyisi hangisi?",
+          "intent": "product_info",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Selin,\n\nPerformans ve fiyat açısından en iyi laptop önerim **Apple MacBook Air M3 13 inç** olacaktır. İşte detayları:\n\n### Apple MacBook Air M3 13-inch\n- **Fiyat**: ₺35,999.99\n- **Stok Durumu**: 8 adet mevcut\n- **Depolama Seçenekleri**: 256GB/512GB/1TB\n- **Renk Seçenekleri**: Gece Yarısı, Yıldız Işığı, Gümüş\n- **Sıralama**: ⭐ 4.9/5 (567 inceleme)\n- **Garanti**: 2 yıl üretici garantisi\n- **İade Süresi**: 15 gün\n- **Özellikler**: M3 çip ile yüksek performans, 18 saat pil ömrü, Liquid Retina ekran\n\nBu model, yazılım geliştirme gibi yoğun uygulamaları çalıştırmak için oldukça uygun bir seçimdir. Ayrıca uzun pil ömrü ve kompakt yapısıyla da dikkat çekiyor.\n\nEğer başka bir model veya markayla ilgileniyorsanız veya daha fazla bilgi ister misiniz, lütfen bana bildirin! Başka bir konuda yardımcı olmamı ister misiniz?",
+          "tools_used": [
+            "get_product_info"
+          ],
+          "response_length": 827
+        }
+      ],
+      "summary": {
+        "total_steps": 4,
+        "errors": 0,
+        "tools_used": [
+          "get_product_info",
+          "get_faq_info"
+        ],
+        "intents_detected": [
+          "product_info",
+          "general_inquiry"
+        ]
+      }
+    },
+    {
+      "scenario_id": 9,
+      "name": "Account Access Problem",
+      "customer": "Hasan Güler",
+      "interactions": [
+        {
+          "step": 1,
+          "user_input": "Hesabıma giremiyorum",
+          "intent": "account_help",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Hasan Güler,\n\nHesabınıza giriş yapamamanız için üzgünüm. Sorununuzu çözmek için bazı adımlar takip edebiliriz. Lütfen aşağıdaki adımları izleyin:\n\n1. E-posta adresinizin doğru olduğundan emin olun: hasan.guler@yahoo.com\n2. Telefon numaranızı kontrol edin ve doğrulayın.\n3. Şifrenizi sıfırlamak için e-posta adresinize bir şifre sıfırlama linki gönderebilirim.\n4. Eğer şifre sıfırlama işlemi sırasında SMS doğrulaması gerekecek, lütfen telefonunuza gelen SMS kodunu kontrol edin.\n5. Yeni bir şifre oluşturmayı unutmayın.\n\nBu adımları takip ettikten sonra sorununuz devam ederse, lütfen bana bildirin, daha fazla yardımcı olabilirim.\n\nSize daha fazla bir şeyle yardımcı olabilir miyim?",
+          "tools_used": [
+            "get_procedure_info",
+            "get_customer_info",
+            "get_faq_info"
+          ],
+          "response_length": 691
+        },
+        {
+          "step": 2,
+          "user_input": "Şifremi unuttum galiba",
+          "intent": "account_help",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Hasan Güler,\n\nŞifrenizi unuttuğunuz için üzgünüm. Sorununuzu çözmek için şifre sıfırlama işlemini gerçekleştirebiliriz. Lütfen aşağıdaki adımları izleyin:\n\n1. Şifrenizi sıfırlamak için e-posta adresinize bir sıfırlama linki göndereceğim. Lütfen [hasan.guler@yahoo.com](mailto:hasan.guler@yahoo.com) adresinizi kontrol edin.\n2. E-postayı aldıktan sonra, verilen talimatları izleyerek yeni bir şifre oluşturun.\n3. Eğer SMS doğrulaması gerekiyorsa, telefonunuza bir kod gönderilecek. O kodu kullanarak devam edebilirsiniz.\n\nBu adımları takip ettikten sonra herhangi bir sorunla karşılaşırsanız, lütfen bana bildirin. Size başka bir konuda yardımcı olabilir miyim?",
+          "tools_used": [],
+          "response_length": 668
+        },
+        {
+          "step": 3,
+          "user_input": "E-postamı da değiştirdim",
+          "intent": "account_help",
+          "confidence": 0.9,
+          "entities": {
+            "customer_identifier": "email"
+          },
+          "agent_response": "Merhaba Hasan Güler,\n\nE-postanızı değiştirdiğinizi belirttiniz. Hesap güvenliğiniz için bu değişikliği güncelleyip doğrulamak önemlidir. Lütfen yeni e-posta adresinizi bana iletin, böylece hesabınıza ilişkin bilgilerinizi güncelleyebilirim.\n\nYeni e-posta adresinizi aldıktan sonra, bu adrese şifre sıfırlama linki gönderebilir ve hesabınıza erişiminizi sağlamanıza yardımcı olabilirim.\n\nSize başka bir konuda yardımcı olabilir miyim?",
+          "tools_used": [],
+          "response_length": 433
+        },
+        {
+          "step": 4,
+          "user_input": "Nasıl çözebiliriz?",
+          "intent": "general_inquiry",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Hasan Güler,\n\nE-postanızı değiştirdikten sonra hesabınızla ilgili sorunlar yaşıyorsanız, aşağıdaki adımları izleyerek çözüme ulaşabiliriz:\n\n1. **Yeni E-posta Adresi**: Lütfen yeni e-posta adresinizi bana iletin. Bu bilgiyi güncelleyerek hesabınıza erişim sağlamak için gerekli adımları atabilirim.\n2. **Şifre Sıfırlama İşlemi**: Yeni e-posta adresinize bir şifre sıfırlama linki göndereceğim. Linki aldığınızda talimatları izleyerek yeni bir şifre oluşturabilirsiniz.\n3. **E-posta Hesabı Kontrolü**: E-postanızda spam veya gereksiz iletiler klasörünü kontrol edin, sıfırlama e-postası orada olabilir.\n\nE-posta adresinizle birlikte yeni şifrenizi oluşturduğunuzda, hesabınıza rahatlıkla giriş yapabileceksiniz. Başka bir konuda yardımcı olmamı ister misiniz?",
+          "tools_used": [],
+          "response_length": 765
+        }
+      ],
+      "summary": {
+        "total_steps": 4,
+        "errors": 0,
+        "tools_used": [
+          "get_procedure_info",
+          "get_customer_info",
+          "get_faq_info"
+        ],
+        "intents_detected": [
+          "account_help",
+          "general_inquiry"
+        ]
+      }
+    },
+    {
+      "scenario_id": 10,
+      "name": "Business/Bulk Order Inquiry",
+      "customer": "Murat Öz",
+      "interactions": [
+        {
+          "step": 1,
+          "user_input": "Toplu alım yapmak istiyorum",
+          "intent": "product_info",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Murat Öz,\n\nToplu alım yapmak istediğinizi anlıyorum, ancak hangi ürün hakkında bilgi almak istediğinizi belirtmediniz. Belirli bir ürün arıyorsanız, lütfen ürün adını veya kategorisini paylaşın, böylece fiyatı, stok durumu ve özellikleri hakkında size daha fazla bilgi verebilirim.\n\nYardımcı olmaktan memnuniyet duyarım!",
+          "tools_used": [
+            "get_product_info"
+          ],
+          "response_length": 328
+        },
+        {
+          "step": 2,
+          "user_input": "50 adet tişört gerekiyor",
+          "intent": "product_info",
+          "confidence": 0.9,
+          "entities": {
+            "quantity": "50"
+          },
+          "agent_response": "Merhaba Murat Öz,\n\n50 adet tişört ile ilgili detayları aşağıda bulabilirsiniz:\n\n- **Ürün Adı:** Tişört\n- **Fiyat:** 100 TL (adet başına)\n- **Stok Durumu:** Mevcut stokta yeterli miktar var.\n- **Özellikler:** %100 pamuk, farklı renk seçenekleri mevcut.\n\nBu fiyat ve özellikler, toplu alımınıza geçerli olacaktır. Eğer renklere ya da başka bir detaya özel bir isteğiniz varsa, lütfen belirtin.\n\nSiparişinizi oluşturmak için daha fazla yardıma ihtiyacınız varsa, buradayım!",
+          "tools_used": [
+            "get_product_info"
+          ],
+          "response_length": 470
+        },
+        {
+          "step": 3,
+          "user_input": "Toplu indirim var mı?",
+          "intent": "general_inquiry",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Murat Öz,\n\nToplu indirim ile ilgili olarak, belirli bir miktarda alışveriş yapmanız durumunda indirimlerden yararlanma imkanınız var. Üyelik seviyenize göre indirim oranları şu şekildedir:\n\n- **Bronze Üyeler:** Standart hizmetler.\n- **Silver Üyeler:** %5 indirim, öncelikli destek.\n- **Gold Üyeler:** %10 indirim, ücretsiz kargo, erken erişim.\n- **Premium Üyeler:** %15 indirim, VIP destek, özel etkinlikler.\n\nEğer üyeliğiniz ile ilgili bilgi almak isterseniz veya başka bir sorunuz varsa, buradayım! Siparişinizi oluşturma sürecinde nasıl yardımcı olabileceğimi de belirtmekten çekinmeyin.",
+          "tools_used": [
+            "get_policy_info",
+            "get_faq_info"
+          ],
+          "response_length": 598
+        },
+        {
+          "step": 4,
+          "user_input": "Kurumsal hesap açabilir miyim?",
+          "intent": "account_help",
+          "confidence": 0.9,
+          "entities": {},
+          "agent_response": "Merhaba Murat Öz,\n\nKurumsal hesap açmak istediğinizi anlıyorum. Kurumsal hesap açma süreciyle ilgili bilgi şu şekildedir:\n\n1. **Başvuru Formu:** Web sitemizde bulunan kurumsal hesap başvuru formunu doldurmalısınız.\n2. **E-posta Doğrulama:** Başvurunuz onaylandıktan sonra, e-posta adresinizi doğrulamak için bir onay linki gönderilecektir.\n3. **Gerekli Bilgiler:** Kurumsal bilgileriniz (şirket adı, vergi numarası vb.) talep edilecektir.\n4. **Oluşturma Süreci:** Başvurunuz tamamlandıktan sonra, kurumsal hesabınız oluşturulacak ve gerekli bilgiler sizinle paylaşılacaktır.\n\nBaşvuru süreci ile ilgili herhangi bir sorunuz veya yardıma ihtiyacınız olursa, lütfen bana bildirin. Size yardımcı olmaktan memnuniyet duyarım!",
+          "tools_used": [
+            "get_procedure_info",
+            "get_faq_info"
+          ],
+          "response_length": 720
+        }
+      ],
+      "summary": {
+        "total_steps": 4,
+        "errors": 0,
+        "tools_used": [
+          "get_procedure_info",
+          "get_product_info",
+          "get_policy_info",
+          "get_faq_info"
+        ],
+        "intents_detected": [
+          "product_info",
+          "account_help",
+          "general_inquiry"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+order_id,customer_id,product_id,quantity,total_price,order_status,shipping_status,tracking_code,order_date,estimated_delivery,shipping_address,payment_method,payment_status
+TY123456789,C001,P001,1,52999.99,Tamamlandı,Teslim Edildi,TY123456789,2025-06-20 14:30:22,2025-06-23 14:30:22,"İstanbul, Kadıköy, Moda Mah. 123 Sok. No:5",Kredi Kartı,Ödendi
+TY234567890,C002,P003,2,2599.98,Kargoda,Dağıtımda,TY234567890,2025-06-25 09:15:33,2025-06-28 09:15:33,"Ankara, Çankaya, Kızılay Mah. 456 Cad. No:12",Kapıda Ödeme,Beklemede
+TY345678901,C003,P002,1,47999.99,Hazırlanıyor,Hazırlanıyor,TY345678901,2025-06-26 16:45:12,2025-06-29 16:45:12,"İzmir, Bornova, Evka 3 Mah. 789 Sok. No:8",Kredi Kartı,Ödendi
+TY456789012,C004,P004,1,1799.99,Kargoda,Yolda,TY456789012,2025-06-24 11:20:55,2025-06-27 11:20:55,"Bursa, Nilüfer, Özlüce Mah. 101 Cad. No:15",BKM Express,Ödendi
+TY567890123,C005,P005,3,4499.97,Onaylandı,Hazırlanıyor,TY567890123,2025-06-27 08:30:44,2025-06-30 08:30:44,"Antalya, Muratpaşa, Lara Mah. 202 Sok. No:22",Kredi Kartı,Ödendi
+TY678901234,C006,P006,2,1599.98,Tamamlandı,Teslim Edildi,TY678901234,2025-06-18 13:15:27,2025-06-21 13:15:27,"Adana, Seyhan, Reşatbey Mah. 303 Cad. No:9",Kapıda Ödeme,Ödendi
+TY789012345,C007,P007,1,35999.99,Kargoda,Dağıtımda,TY789012345,2025-06-25 17:40:18,2025-06-28 17:40:18,"Konya, Selçuklu, Bosna Hersek Mah. 404 Sok. No:7",Kredi Kartı,Ödendi
+TY890123456,C008,P008,1,8999.99,İptal Edildi,İptal,TY890123456,2025-06-22 10:25:36,2025-06-25 10:25:36,"Eskişehir, Odunpazarı, Çamlıca Mah. 505 Cad. No:13",Kredi Kartı,İade Edildi
+TY901234567,C009,P009,2,3199.98,Hazırlanıyor,Hazırlanıyor,TY901234567,2025-06-26 15:50:29,2025-06-29 15:50:29,"Kayseri, Melikgazi, Erkilet Mah. 606 Sok. No:11",BKM Express,Ödendi
+TY012345678,C010,P010,5,7499.95,Onaylandı,Beklemede,TY012345678,2025-06-27 09:10:15,2025-07-01 09:10:15,"Mersin, Akdeniz, Marina Mah. 707 Cad. No:19",Havale/EFT,Beklemede

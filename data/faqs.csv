@@ -1,0 +1,11 @@
+question,answer,category,keywords,related_topics
+Siparişimi nasıl takip edebilirim?,Sipariş numaranız ile Hesabım > Siparişlerim bölümünden takip edebilirsiniz. SMS ve e-posta ile bilgilendirme yapılır.,order_status,"takip, sipariş, kargo","shipping, tracking"
+İade süreci nasıl işliyor?,"15 gün içinde orijinal ambalajında iade edebilirsiniz. İade talebini Hesabım bölümünden başlatın, kargo etiketini yazdırın.",return_refund,"iade, geri gönderme, değişim","return, exchange"
+Kargo ücreti ne kadar?,Standart kargo 29.99 TL. 500 TL üzeri veya Gold/Premium üyelerde ücretsiz.,order_status,"kargo, ücret, ücretsiz","shipping, delivery"
+Üyelik seviyemi nasıl yükseltebilirim?,Yıllık alışveriş tutarınıza göre otomatik yükselir. Bronze>Silver: 2000 TL Silver>Gold: 5000 TL Gold>Premium: 15000 TL,account_help,"üyelik, seviye, yükseltme","membership, upgrade"
+Ödeme yaparken hata alıyorum ne yapmalıyım?,"Kart bilgilerini kontrol edin, limit durumunu bankadan sorgulayın. Sorun devam ederse farklı ödeme yöntemi deneyin.",payment_issue,"ödeme, hata, kart","payment, error"
+Ürün garantisi var mı?,Elektronik ürünlerde 2 yıl resmi garanti. Giyim ürünlerinde 30 gün değişim garantisi bulunur.,product_info,"garanti, koruma, değişim","warranty, protection"
+Kapıda ödeme yapabilir miyim?,"Evet, sadece nakit ile. 1000 TL altı siparişlerde geçerli. Büyük şehirlerde mevcut.",payment_issue,"kapıda ödeme, nakit, tutar","cash on delivery"
+Sipariş iptal edebilir miyim?,"Kargoya verilmeden önce iptal edebilirsiniz. Hesabım > Siparişlerim > İptal Et'e tıklayın.",order_status,"iptal, cancel, değişiklik","cancellation, change"
+Telefon numaramı nasıl değiştirebilirim?,Hesabım > Kişisel Bilgiler > Düzenle'den değiştirebilirsiniz. SMS doğrulaması gerekir.,account_help,"telefon, numara, değiştirme","phone, change"
+Stokta olmayan ürün ne zaman gelir?,"Ürün sayfasındaki 'Stok Geldiğinde Haber Ver' butonuna tıklayarak bilgilendirilme talebinde bulunabilirsiniz.",product_info,"stok, bekleme, bildirim","stock, notification"

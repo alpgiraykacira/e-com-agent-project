@@ -1,0 +1,9 @@
+intent,scenario,response_template,tone,usage_notes,escalation_trigger
+order_status,tracking_inquiry,"Merhaba {customer_name}! {order_id} numaralı siparişiniz şu anda {status} durumunda. Tahmini teslimat: {delivery_date}. Detaylı takip için: {tracking_code}",friendly,Sipariş bilgileri mevcut olduğunda,Sipariş bulunamadığında
+product_info,stock_check,"Merhaba! {product_name} ürünü şu anda {stock_status}. Fiyat: {price} TL. {availability_info} Başka sorunuz var mı?",helpful,Stok ve fiyat bilgisiyle,Ürün bulunamadığında
+return_refund,return_request,"Tabii ki! İade işleminize yardımcı olacağım. {product_name} için iade süreci: 15 gün içinde orijinal ambalajında. Hesabınızdan iade talebini başlatabilirsiniz.",understanding,İade koşulları karşılandığında,15 gün aşıldığında
+account_help,login_issue,"Hesabınıza erişim konusunda yardımcı olacağım. {email} adresine şifre sıfırlama linki gönderebilirim. Telefon doğrulaması da gerekebilir.",supportive,Standart hesap sorunları için,Güvenlik riski tespit edildiğinde
+payment_issue,payment_error,"Ödeme sorununuzu anlıyorum. Lütfen kart bilgilerinizi kontrol edin. Sorun devam ederse farklı ödeme yöntemi deneyebilir veya bankanızla iletişime geçebilirsiniz.",patient,Teknik ödeme sorunları için,Dolandırıcılık şüphesinde
+general_inquiry,policy_question,"Size yardımcı olmaktan mutluluk duyarım. {policy_topic} ile ilgili: {policy_details} Başka merak ettiğiniz var mı?",informative,Politika sorularında,Karmaşık hukuki konularda
+complaint,service_complaint,"Yaşadığınız sorunu anlıyorum ve özür dilerim. Bu durumu çözmek için elimden geleni yapacağım. {solution_offer} Size uygun mu?",empathetic,Genel şikayetlerde,Ciddi memnuniyetsizliklerde
+compliment,positive_feedback,"Teşekkür ederim {customer_name}! Memnuniyetinizi duymak bizi çok mutlu etti. Deneyiminizi paylaştığınız için teşekkürler. Size hizmet vermek bir zevk!",appreciative,Pozitif geri bildirimlerde,Özel ödül gerektiren durumlarda

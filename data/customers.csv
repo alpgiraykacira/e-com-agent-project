@@ -1,0 +1,11 @@
+customer_id,name,email,phone,address,membership_level
+C001,Ahmet Yılmaz,ahmet.yilmaz@gmail.com,+90 532 123 4567,"İstanbul, Kadıköy, Moda Mah. 123 Sok. No:5",Gold
+C002,Ayşe Demir,ayse.demir@hotmail.com,+90 533 234 5678,"Ankara, Çankaya, Kızılay Mah. 456 Cad. No:12",Silver
+C003,Mehmet Kaya,mehmet.kaya@yahoo.com,+90 534 345 6789,"İzmir, Bornova, Evka 3 Mah. 789 Sok. No:8",Bronze
+C004,Zeynep Kaya,zeynep.kaya@gmail.com,+90 535 456 7890,"Bursa, Nilüfer, Özlüce Mah. 101 Cad. No:15",Silver
+C005,Ali Şahin,ali.sahin@outlook.com,+90 536 567 8901,"Antalya, Muratpaşa, Lara Mah. 202 Sok. No:22",Gold
+C006,Fatma Arslan,fatma.arslan@gmail.com,+90 537 678 9012,"Adana, Seyhan, Reşatbey Mah. 303 Cad. No:9",Bronze
+C007,Emre Koç,emre.koc@hotmail.com,+90 538 789 0123,"Konya, Selçuklu, Bosna Hersek Mah. 404 Sok. No:7",Premium
+C008,Selin Yurt,selin.yurt@gmail.com,+90 539 890 1234,"Eskişehir, Odunpazarı, Çamlıca Mah. 505 Cad. No:13",Silver
+C009,Hasan Güler,hasan.guler@yahoo.com,+90 540 901 2345,"Kayseri, Melikgazi, Erkilet Mah. 606 Sok. No:11",Gold
+C010,Murat Öz,murat.oz@outlook.com,+90 541 012 3456,"Mersin, Akdeniz, Marina Mah. 707 Cad. No:19",Premium

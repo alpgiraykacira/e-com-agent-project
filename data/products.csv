@@ -1,0 +1,11 @@
+product_id,title,brand,category,price,stock_quantity,sizes,colors,description,seller_name,rating,review_count,created_at
+P001,iPhone 15 Pro Max 256GB,Apple,Elektronik,52999.99,15,256GB,"Doğal Titanyum, Siyah Titanyum, Beyaz Titanyum, Mavi Titanyum","Apple'ın en gelişmiş iPhone'u. Titanyum tasarım, A17 Pro çip, profesyonel kamera sistemi.",TechWorld,4.8,1247,2025-05-15
+P002,Samsung Galaxy S24 Ultra 512GB,Samsung,Elektronik,47999.99,23,512GB,"Siyah, Gri, Mor, Sarı","S Pen ile güçlü performans. 200MP kamera, Snapdragon 8 Gen 3, AI destekli özellikler.",MobileDünya,4.7,892,2025-06-01
+P003,Nike Air Max 270,Nike,Spor & Outdoor,1299.99,45,"36,37,38,39,40,41,42,43,44,45","Siyah, Beyaz, Kırmızı, Mavi","Rahat ve şık tasarım. Air Max teknolojisi ile üstün konfor sağlar.",SportMax,4.5,634,2025-06-10
+P004,Adidas Ultraboost 22,Adidas,Spor & Outdoor,1799.99,32,"36,37,38,39,40,41,42,43,44,45","Siyah, Beyaz, Gri, Pembe","Enerji geri dönüşüm teknolojisi. Koşu ve günlük kullanım için ideal.",AdidasTR,4.6,456,2025-06-08
+P005,Zara Erkek T-Shirt,Zara,Giyim,149.99,89,"S,M,L,XL,XXL","Beyaz, Siyah, Lacivert, Gri","100% pamuk, rahat kesim. Günlük kullanım için ideal temel parça.",ZaraTR,4.2,234,2025-06-12
+P006,H&M Kadın Bluz,H&M,Giyim,79.99,67,"XS,S,M,L,XL","Beyaz, Siyah, Mavi, Pembe","Şık ve modern tasarım. Ofis ve günlük kombinler için uygun.",HMTurkiye,4.1,189,2025-06-14
+P007,MacBook Air M3 13-inch,Apple,Elektronik,35999.99,8,256GB/512GB/1TB,"Gece Yarısı, Yıldız Işığı, Gümüş","M3 çip ile güçlü performans. 18 saat pil ömrü, Liquid Retina ekran.",AppleStore,4.9,567,2025-05-20
+P008,Sony WH-1000XM5 Kulaklık,Sony,Elektronik,8999.99,25,Tek Boyut,"Siyah, Gümüş","Endüstri lideri gürültü engelleme. 30 saat pil ömrü, premium ses kalitesi.",SonyTR,4.8,723,2025-06-05
+P009,Philips Airfryer XXL,Philips,Ev & Yaşam,1599.99,18,7.3L,"Siyah, Beyaz","Rapid Air teknolojisi. %90 daha az yağ, 1.4 kg kapasiteli sepet.",PhilipsTR,4.4,412,2025-06-03
+P010,IKEA MALM Yatak Odası Takımı,IKEA,Ev & Yaşam,1499.99,12,"160x200, 180x200","Beyaz, Meşe, Siyah-kahverengi","Modern tasarım yatak odası takımı. Yatak, 2 komodin ve dolap dahil.",IKEATR,4.3,298,2025-06-07
